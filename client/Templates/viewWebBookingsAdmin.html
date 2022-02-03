@@ -1,0 +1,36 @@
+{% extends "admin_Master.html" %}
+{% block content %}
+{% load static %}
+
+
+
+<div class="p-3">
+    <center><h3 class="pt-3">Customers Web Appointments</h3></center>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>e-mail</th>
+                <th>Phone</th>
+                <th>Date</th>
+                <th>Booked Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for web in web %}
+            <tr>
+                <td>{{web.client_Name}}</td>
+                <td>{{web.client_email}}</td>
+                <td>{{web.client_phone}}</td>
+                <td>{{web.scheduled_Date}}</td>
+                <td>{{web.scheduled_Time}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "client_Master.html" %}
+{% block content %}
+{% load static %}
+
+    <div class="booking">
+        <center>
+            <h3 class="p-5 fs-1 font-monospace">Book Your Appointment</h3>
+            <div class="row p-5" id="bookpic">
+
+                <div class="col box">
+                    <a href="{% url 'booking_Web' %}"><img class="img-fluid wbdt"
+                            src="{% static 'images/wbdp.jpg' %}" alt="" width="400px" /></a>
+                    <h3 class="p-2 font-monospace">Web Development</h3>
+                </div>
+                <div class="col box">
+                    <a href="{% url 'booking_App' %}"><img class="img-fluid wbdt" id=""
+                            src="{% static 'images/apdp.jpg' %}" alt="" width="400px" /></a>
+                    <h3 class="p-2 font-monospace">App Development</h3>
+                </div>
+            </div>
+        </center>
+    </div>
+
+
+
+{% endblock %}

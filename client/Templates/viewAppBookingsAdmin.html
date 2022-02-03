@@ -1,0 +1,37 @@
+{% extends "admin_Master.html" %}
+{% block content %}
+{% load static %}
+
+<div class="p-3">
+    <center>
+        <h3 class="pt-3">Customers App Appointments</h3>
+    </center>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>e-mail</th>
+                <th>Phone</th>
+                <th>Date</th>
+                <th>Booked Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for app in app %}
+            <tr>
+                <td>{{app.client_Name}}</td>
+                <td>{{app.client_email}}</td>
+                <td>{{app.client_phone}}</td>
+                <td>{{app.scheduled_Date}}</td>
+                <td>{{app.scheduled_Time}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+
+{% endblock %}

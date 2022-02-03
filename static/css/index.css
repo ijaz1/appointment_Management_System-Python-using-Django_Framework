@@ -1,0 +1,77 @@
+.h1 {
+    color: brown;
+}
+
+.carousal {
+    height: 100vh;
+}
+
+.booking {
+    background-color: #7CB9E8;
+    height: 100vh;
+}
+
+.wbdt {
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.wbdt:hover {
+    transform: translateY(-10px);
+}
+
+.google-btn {
+    width: 252px;
+    height: 42px;
+    background-color: #4285f4;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .25);
+}
+
+.google-icon-wrapper {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.google-icon {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 18px;
+    height: 18px;
+}
+
+.btn-text {
+    float: right;
+    margin: 11px 11px 0 0;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    font-family: "Roboto";
+}
+
+.google-btn:hover {
+    box-shadow: 0 0 6px #4285f4;
+}
+
+.google-btn:active {
+    background: #1669F2;
+}
+
+#nav {
+    background: rgba( 0, 0, 0, 0 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);

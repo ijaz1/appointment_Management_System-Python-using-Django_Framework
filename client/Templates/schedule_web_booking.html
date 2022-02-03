@@ -1,0 +1,78 @@
+{% extends "admin_Master.html" %}
+{% block content %}
+{% load static %}
+
+
+<div class="p-5">
+    <center><h3 class="pt-2">Schedule Web Development Booking</h3></center>
+    <h6>Select Date</h6>
+    <form action="{% url 'saveScheduledTimeSlot' %}" method="POST">
+        {% csrf_token %}
+        <input type="date" name="scheduled_date">
+        <center>
+            <h3>Time Slots</h3>
+            <div class="d-inline-flex p-2">
+                <input class="p-2" type="text" value="9:00am to 10:00am" name="firstSlot">
+                <select class="" name="firstSelect" id="">
+                    <option value="available">Available</option>
+                    <option value="unavailable">Unavailable</option>
+                </select>
+            </div>
+            <br>
+            <div class="d-inline-flex p-2">
+                <input class="p-2" type="text" value="10:00am to 11:00am" name="SecondSlot">
+                <select class="" name="SecondSelect" id="">
+                    <option value="available">Available</option>
+                    <option value="unavailable">Unavailable</option>
+                </select>
+            </div>
+            <br>
+            <div class="d-inline-flex p-2">
+                <input class="p-2" type="text" value="11:00am to 12:00pm" name="ThirdSlot">
+                <select class="" name="ThirdSelect" id="">
+                    <option value="available">Available</option>
+                    <option value="unavailable">Unavailable</option>
+                </select>
+            </div>
+            <br>
+            <div class="d-inline-flex p-2">
+                <input class="p-2" type="text" value="1:00pm to 2:00pm" name="fourthSlot">
+                <select class="" name="fourthSelect" id="">
+                    <option value="available">Available</option>
+                    <option value="unavailable">Unavailable</option>
+                </select>
+            </div>
+            <br>
+            <div class="d-inline-flex p-2">
+                <input class="p-2" type="text" value="2:00pm to 3:00pm" name="fifthSlot">
+                <select class="" name="fifthSelect" id="">
+                    <option value="available">Available</option>
+                    <option value="unavailable">Unavailable</option>
+                </select>
+            </div>
+            <br>
+            <div class="d-inline-flex p-2">
+                <input class="p-2" type="text" value="3:00pm to 4:00pm" name="sixthSlot">
+                <select class="" name="sixthSelect" id="">
+                    <option value="available">Available</option>
+                    <option value="unavailable">Unavailable</option>
+                </select>
+            </div>
+            <br>
+            <div class="d-inline-flex p-2">
+                <input class="p-2" type="text" value="4:00pm to 5:00pm" name="seventhSlot">
+                <select class="" name="seventhSelect" id="">
+                    <option value="available">Available</option>
+                    <option value="unavailable">Unavailable</option>
+                </select>
+            </div>
+            <br><br>
+            <button class="btn btn-success" type="submit">Submit</button>
+        </center>
+    </form>
+</div>
+
+
+
+
+{% endblock %}

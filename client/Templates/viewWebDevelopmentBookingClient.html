@@ -1,0 +1,33 @@
+{% extends "client_Master.html" %}
+{% block content %}
+{% load static %}
+
+<div class="p-3">
+    <center><h3 class="pt-3">Your Appointment</h3></center>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Cancel</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for slot in slot %}
+            <tr>
+                <td>{{slot.scheduled_Date}}</td>
+                <td>{{slot.scheduled_Time}}</td>
+                <td>{{slot.status}}</td>
+                <td><a href="{% url 'canselWebBooking' slot=slot.id %}" class="text-decoration-none">Cancel Appointment</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "client_Master.html" %}
+{% block content %}
+
+
+<div class="p-4">
+
+    <center>
+        <h3 class="pt-4">App Appointment Booking</h3>
+    </center>
+    <form action="{% url 'CheckApp' %}" method="POST">
+        {% csrf_token %}
+        <h6>Select Date</h6>
+        <input type="date" name="checkDate">
+        <button class="btn btn-primary" type="submit">Check</button>
+    </form>
+    <br>
+
+    <center>
+        <h5>Available Time Slot</h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time Slot</th>
+                    <th>Status</th>
+                    <th>Book Now</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for availableSlotApp in availableSlotApp %}
+                <tr>
+                    <td>{{availableSlotApp.scheduled_Date}}</td>
+                    <td>{{availableSlotApp.scheduled_Time}}</td>
+                    <td>{{availableSlotApp.status}}</td>
+                    <td><a href="{% url 'AppBookingSlot' AppSlotId=availableSlotApp.id %}"
+                            class="text-decoration-none">Book Now</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </center>
+</div>
+
+
+
+{% endblock %}
